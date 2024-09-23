@@ -32,8 +32,10 @@ public class Automovel implements Comparable<Automovel> {
 
     public int compareTo(Automovel outro){
        if(placa.compareTo(outro.getPlaca()) < 0){
+           return -1;
+       }else if(placa.compareTo(outro.getPlaca()) == 0){
            return 0;
-       }else{
+       } else{
            return 1;
        }
     }
